@@ -1,9 +1,11 @@
 import '../styles/global.scss';
+import { Footer } from '../components/Footer';
 
 function MyApp({ Component, pageProps }) { 
   return (
     <>
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }
