@@ -7,6 +7,8 @@ import { SectionAbout } from "../components/Home/SectionAbout";
 import { aboutData } from "../components/Home/SectionAbout/data";
 import { SectionNumbers } from "../components/Home/SectionNumbers";
 import { numbersData } from "../components/Home/SectionNumbers/data";
+import { SectionTestimonies } from "../components/Home/SectionTestimonies";
+import { testimoniesData } from "../components/Home/SectionTestimonies/data";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
       <SectionScenario scenario={scenarioData} />
       <SectionAbout about={aboutData} />
       <SectionNumbers numbers={numbersData} />
+      <SectionTestimonies testimonies={testimoniesData}/>
     </>
   );
 }

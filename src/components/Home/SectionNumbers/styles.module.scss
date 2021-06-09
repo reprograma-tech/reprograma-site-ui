@@ -1,12 +1,13 @@
 .numbers {
   margin: 0 auto;
-  padding: 10rem 0;
+  padding: 10rem 0 5rem 0;
   max-width: 70vw;
   display: flex;
   justify-content: space-evenly;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 7rem 0 2rem 0;
   }
 
   & > div {
