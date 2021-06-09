@@ -1,7 +1,8 @@
 import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
-export function Header() {
+export function Header({ links }) {
   const [showBackground, setShowBackground] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(false);
   const [showMenuMobile, setShowMenuMobile] = useState(false);
@@ -30,15 +31,17 @@ export function Header() {
       }`}
     >
       <div>
-        <a href="/">
-          <img
-            src={
-              showBackground
-                ? "/images/logo/reprograma.png"
-                : "/images/logo/reprograma-reduzido.png"
-            }
-          />
-        </a>
+        <Link href="/">
+          <a>
+            <img
+              src={
+                showBackground
+                  ? "/images/logo/reprograma.png"
+                  : "/images/logo/reprograma-reduzido.png"
+              }
+            />
+          </a>
+        </Link>
         <nav className={styles.navigation}>
           <ul className={styles.menuDesktop}>
             <li id="menu-ensino" onClick={handleSubmenu}>
@@ -48,24 +51,38 @@ export function Header() {
                   showSubmenu ? styles.showSubmenu : ""
                 }`}
               >
-                <a href="/#cursos">Cursos</a>
-                <a href="/projetos">+ Projetos</a>
+                <Link href="/#cursos">
+                  <a>Cursos</a>
+                </Link>
+                <Link href="/projetos">
+                  <a>+ Projetos</a>
+                </Link>
               </div>
             </li>
             <li>
-              <a href="/equipe">Equipe</a>
+              <Link href="/equipe">
+                <a>Equipe</a>
+              </Link>
             </li>
             <li>
-              <a href="/parcerias">Parceiros</a>
+              <Link href="/parcerias">
+                <a>Parceiros</a>
+              </Link>
             </li>
             <li>
-              <a href="/contrate">Contrate uma aluna</a>
+              <Link href="/contrate">
+                <a>Contrate uma aluna</a>
+              </Link>
             </li>
             <li>
-              <a href="/todas-tech">Todas em Tech</a>
+              <Link href="/todas-tech">
+                <a>Todas em Tech</a>
+              </Link>
             </li>
             <li>
-              <a href="/midia">Na mídia</a>
+              <Link href="/midia">
+                <a>Na mídia</a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -84,27 +101,14 @@ export function Header() {
             showMenuMobile ? styles.showMenuMobile : ""
           }`}
         >
-          <li>
-            <a href="/#courses">Cursos</a>
-          </li>
-          <li>
-            <a href="/projetos">Projetos</a>
-          </li>
-          <li>
-            <a href="/equipe">Equipe</a>
-          </li>
-          <li>
-            <a href="/parcerias">Parceiros</a>
-          </li>
-          <li>
-            <a href="/contrate">Contrate uma aluna</a>
-          </li>
-          <li>
-            <a href="/todas-tech">Todas em Tech</a>
-          </li>
-          <li>
-            <a href="/midia">Na mídia</a>
-          </li>
+          {links &&
+            links.map((link, index) => (
+              <Link key={index} href={link.href}>
+                <li>
+                  <a onClick={handleMenuMobile}>{link.label}</a>
+                </li>
+              </Link>
+            ))}
         </ul>
       </div>
     </header>
