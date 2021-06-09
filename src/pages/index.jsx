@@ -3,6 +3,8 @@ import { Banner } from "../components/Banner";
 import { homeBanner } from "../components/Banner/data";
 import { SectionScenario } from "../components/Home/SectionScenario";
 import { scenarioData } from "../components/Home/SectionScenario/data";
+import { SectionAbout } from "../components/Home/SectionAbout";
+import { aboutData } from "../components/Home/SectionAbout/data";
 
 export default function Home() {
   return (
@@ -12,6 +14,7 @@ export default function Home() {
       </Head>
       <Banner banner={homeBanner} />
       <SectionScenario scenario={scenarioData} />
+      <SectionAbout about={aboutData} />
     </>
   );
 }
