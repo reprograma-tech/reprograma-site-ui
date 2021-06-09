@@ -1,0 +1,93 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin: auto;
+
+  @media (max-width: 720px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & > h3 {
+    font-weight: 900;
+    font-size: 7rem;
+    line-height: 6.5rem;
+    width: 350px;
+
+    @media (max-width: 720px) {
+      font-size: 6rem;
+      width: 300px;
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+  }
+}
+
+.underline {
+  background-image: url("../../../public/images/footer/purple_trace.png");
+  background-size: 275px 175px;
+  padding-top: 1rem;
+
+  @media (max-width: 720px) {
+    background-size: 240px 145px;
+    padding-top: 1rem;
+  }
+}
+
+.recognitions{
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+
+  @media (max-width: 720px) {
+    margin-bottom: 4.5rem;
+    width: 300px;
+  }
+
+  & > img {
+    padding: 1rem;
+    height: 10rem;
+    width: auto;
+
+    @media (max-width: 720px) {
+      height: 8rem;
+    }
+  }
+}
+
+.social {
+  @media (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > p {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  & > img {
+    margin-top: 3.2rem;
+  }
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+
+  & > a > svg {
+    color: var(--purple);
+    font-size: 3rem;
+  }
+}
