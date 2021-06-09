@@ -10,22 +10,35 @@
 
 .bannerContent {
   padding: 0 0 7% 8%;
-  max-width: 70vw;
+  max-width: 900px;
   color: var(--white);
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 5% 50% 5%;
+  }
 
   h1 {
     font-weight: 900;
     font-size: 7.2rem;
     letter-spacing: 0.15rem;
-    width: 900px;
     word-wrap: break-word;
+
+    @media (max-width: 768px) {
+      font-size: 4.4rem;
+    }
   }
   
   p {
     font-size: 2.4rem;
     letter-spacing: 0.05rem;
     line-height: 1.5;
-    width: 500px;
+    width: 65%;
     margin:2.4rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      width: 100%;
+    }
   }
 }

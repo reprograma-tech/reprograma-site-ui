@@ -4,7 +4,7 @@
   font-weight: 700;
   border-radius: 3.2rem;
   letter-spacing: 0.15rem;
-  padding: 1.6rem 4.5rem;
+  padding: 1.6rem 3.8rem;
   text-align: center;
   text-transform: uppercase;
   border-width: 2px;
@@ -15,6 +15,10 @@
   border-right-color: var(--gray-900);
   background-color: transparent;
   transition: background-color 500ms ease;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 
   & + a {
     margin-left: 2rem;
