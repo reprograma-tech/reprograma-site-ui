@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  left: 0;
+  margin: 0;
+  right: 0;
+  z-index: 10;
+  max-height: 130px;
+  background-color: transparent;
+  transition: background-color 1000ms ease-in-out;
+
+  & > div {
+    margin: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+
+    @media (max-width: 720px) {
+      align-items: center;
+      padding: 0.8rem 0;
+    }
+  }
+}
+
+.headerFilled {
+  background-color: var(--purple);
+  transition: background-color 1000ms ease-in-out;
+}
+
+.navigation {
+  margin-left: 2rem;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+.menuDesktop {
+  display: flex;
+  margin-top: 78px;
+  position: relative;
+
+  li {
+    color: var(--white);
+    font-size: 2.1rem;
+    text-align: center;
+    cursor: pointer;
+
+    + li {
+      margin-left: 3.5rem;
+    }
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: -0.6rem;
+  left: -1.8rem;
+  z-index: -1;
+  background-color: var(--purple);
+  padding: 3.2rem 1.6rem 1.6rem 1.6rem;
+  border-radius: 1rem;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+
+  a {
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    color: var(--purple-light);
+    transition: color 300ms;
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
+
+.showSubmenu {
+  transition: opacity 500ms ease-in-out;
+  opacity: 1;
+}
+
+.hamburguer {
+  display: none;
+
+  @media (max-width: 720px) {
+    display: block;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 32px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 5px 0;
+  transition-duration: 0.4s;
+}
+
+.mobileToggle .bar1 {
+  transform: rotate(-45deg) translate(-3px, 3px);
+  background: var(--white);
+}
+
+.mobileToggle .bar2 {
+  opacity: 0;
+}
+.mobileToggle .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+  background: var(--white);
+}
+
+.menuMobile {
+  position: absolute;
+  background: var(--purple);
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  text-align: end;
+  padding: 20% 8%;
+  opacity: 0;
+  transition: opacity 500ms;
+  visibility: hidden;
+
+  & > li {
+    margin-top: 2rem;
+
+    & a {
+      color: var(--purple-light);
+      font-size: 2rem;
+      line-height: 3rem;
+      font-weight: bold;
+      transition: color 300ms;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.showMenuMobile {
+  opacity: 1;
+  visibility: visible;
+}
