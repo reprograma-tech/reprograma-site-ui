@@ -1,7 +1,6 @@
 import styles from "./styles.module.scss";
 
 export function SectionScenario({scenario}) {
-  console.log(scenario)
   return (
     <section className={styles.sectionScenario}>
       {scenario.map((item, index) => (
