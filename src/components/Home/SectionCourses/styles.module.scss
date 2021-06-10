@@ -1,0 +1,78 @@
+.sectionCourses {
+  padding: 15rem 13rem 3rem 13rem;
+
+  @media (max-width: 768px) {
+    padding: 10% 5%;
+  }
+}
+
+.sectionTitle {
+  font-weight: 900;
+  font-size: 7.2rem;
+  color: var(--gray);
+
+  @media (max-width: 768px) {
+    font-size: 5rem;
+  }
+}
+
+.nextCourses {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.course {
+  background-color: var(--purple);
+  width: 45%;
+  max-width: 695px;
+  padding: 5%;
+  margin: 6rem 0;
+
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+    width: 100%;
+    padding: 10%;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: var(--white);
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  h4 {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--white);
+    @media (max-width: 768px) {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+.courseSubtitle {
+  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.courseInfo {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: var(--white);
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}

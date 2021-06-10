@@ -13,6 +13,8 @@ import { SectionOurTeam } from "../components/Home/SectionOurTeam";
 import { ourTeamData } from "../components/Home/SectionOurTeam/data";
 import { SectionPartners } from "../components/Home/SectionPartners";
 import { partnersData } from "../components/Home/SectionPartners/data";
+import { SectionCourses } from "../components/Home/SectionCourses";
+import { coursesData } from "../components/Home/SectionCourses/data";
 
 export default function Home() {
   return (
@@ -24,9 +26,10 @@ export default function Home() {
       <SectionScenario scenario={scenarioData} />
       <SectionAbout about={aboutData} />
       <SectionNumbers numbers={numbersData} />
-      <SectionTestimonies testimonies={testimoniesData}/>
-      <SectionOurTeam ourTeam={ourTeamData}/>
+      <SectionTestimonies testimonies={testimoniesData} />
+      <SectionOurTeam ourTeam={ourTeamData} />
       <SectionPartners partners={partnersData} />
+      <SectionCourses courses={coursesData} />
     </>
   );
 }
