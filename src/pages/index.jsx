@@ -11,6 +11,8 @@ import { SectionTestimonies } from "../components/Home/SectionTestimonies";
 import { testimoniesData } from "../components/Home/SectionTestimonies/data";
 import { SectionOurTeam } from "../components/Home/SectionOurTeam";
 import { ourTeamData } from "../components/Home/SectionOurTeam/data";
+import { SectionPartners } from "../components/Home/SectionPartners";
+import { partnersData } from "../components/Home/SectionPartners/data";
 
 export default function Home() {
   return (
@@ -24,6 +26,7 @@ export default function Home() {
       <SectionNumbers numbers={numbersData} />
       <SectionTestimonies testimonies={testimoniesData}/>
       <SectionOurTeam ourTeam={ourTeamData}/>
+      <SectionPartners partners={partnersData} />
     </>
   );
 }
