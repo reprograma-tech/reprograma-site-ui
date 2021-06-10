@@ -7,13 +7,13 @@ export const homeBanner = {
     {
       label: "Participe",
       alternativeText: "Ir para cursos",
-      to: "/#courses",
+      to: "/#cursos",
       variant: 'white'
     },
     {
       label: "Apoie",
       alternativeText: "Ir para parcerias",
-      to: "/#partners"
+      to: "/#parcerias"
     },
   ],
 };

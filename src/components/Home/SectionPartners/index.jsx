@@ -3,7 +3,7 @@ import { LinkButton } from "../../LinkButton";
 
 export function SectionPartners({ partners }) {
   return (
-    <section id="partners" className={styles.sectionPartners}>
+    <section id="parcerias" className={styles.sectionPartners}>
       <div className={styles.partnersText}>
         <h3>{partners.title}</h3>
         <p>{partners.text}</p>

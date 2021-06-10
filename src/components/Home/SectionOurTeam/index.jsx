@@ -3,7 +3,7 @@ import { LinkButton } from "../../LinkButton";
 
 export function SectionOurTeam({ ourTeam }) {
   return (
-    <section className={styles.sectionOurTeam}>
+    <section id="equipe" className={styles.sectionOurTeam}>
       <img
         alt={ourTeam.image.alternativeText}
         src={ourTeam.image.url}
